@@ -28,3 +28,4 @@ if is_card_payment:  # service charge for card payments
 
 print(f"{total_cost:.02f}")
 
+# for output- while entering true or false make sure that the it starts with a capital letter ie.(True/False) else it will eithet increase 12 or decrease 12 from the final output depending on the input.
