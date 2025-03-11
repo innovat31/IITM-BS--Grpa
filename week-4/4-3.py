@@ -1,3 +1,5 @@
+# This program might not run. Improvements are required.
+
 min =  None
 
 def find_min(items:list):
