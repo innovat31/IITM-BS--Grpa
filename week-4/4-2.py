@@ -1,3 +1,5 @@
+# This program might not work. Improvements are required.
+
 # Note this prefix code is to verify that you are not using any for loops in this exercise. This won't affect any other functionality of the program.
 with open(__file__) as f:
     content = f.read().split("# <noloop>")[2]
