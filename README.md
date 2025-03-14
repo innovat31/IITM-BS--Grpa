@@ -282,3 +282,181 @@ manhattan - Take inputs directions such as "UP", "DOWN", "LEFT" and "RIGHT" from
 Write a program to solve these tasks. Use loops where necessary.
 
 # Week-4 :
+
+GrPA 1 - Basic Collections 
+A bit of wisdom 📖
+
+Iterable - Something that can be used in a for loop.
+Collection - Datatypes that hold many values like list, set, tuple and dict.
+All iterables are not collections. Eg. str and range are iterables but not collections.
+All collections are iterables.
+Only ordered collections are indexable and slicable
+Only Mutable collections can be modified
+Hasing is a method used in collections like set to check whether an element is present or not quickly, and in dict to retrive the value for the given key quickly. There are only certain datatypes that can be hashed. For example
+## Sample Table
+
+## Python Data Types Table
+
+| Data Type | Iterable | Collection | Indexable / Slicable | Ordered | Mutable | Uses Hashing |
+|-----------|----------|------------|----------------------|---------|---------|--------------|
+| **str**   | ✅       | ❌         | ✅                   | ✅      | ❌      | ❌           |
+| **range** | ✅       | ❌         | ❌                   | ✅      | ❌      | ❌           |
+| **list**  | ✅       | ✅         | ✅                   | ✅      | ✅      | ❌           |
+| **tuple** | ✅       | ✅         | ✅                   | ✅      | ❌      | ❌           |
+| **set**   | ✅       | ✅         | ❌                   | ❌      | ✅      | ✅           |
+| **dict**  | ✅       | ✅         | ❌                   | ❌      | ✅      | ✅ (on keys) |
+
+
+built-in functions - some functions like sum, min, max, sorted, reversed will help in doing some basic tasks.
+Any iterable can be converted into a list or a tuple
+Any iterable of hashable data types can be converted into a set
+Learning objectives
+
+NOTE In this exercise we will not be using dict as they will be introduced in next week.
+
+Empty collections
+Singleton Collections
+True-ness and False-ness in collections
+Inbuilt functions for collections
+Indexing and Slicing
+Membership checks
+Concatenation
+
+Problem Type: Input variable - Output Variable, Hidden suffix for evaluation
+
+Instructions on how to solve (Click to expand)
+NOTE: In this type of questions you should not take input or print anything unless your are explicitly asked to. Assign the result of the required computation to the correct variable name as it will be evaluated for type and value by the evaluator.
+
+The input variables will be assigned by the evaluator based on the test cases.
+
+The grey part before the white part (if any) in the code is the prefix code. The grey part after the white part (if any) is the suffix code which are not editable. Usually they will be the part of code but in this type of questions it will be removed by the evaluator.
+
+The Three dots (...) called as Ellipsis in python are like placeholders, replace them with your answer.
+
+The inputs on the code blocks are just sample inputs they won't be evaluated in the actual testcases.
+
+Each testcase will have its own set of testcases defined as variables. The check function in the testcases is in the hidden evaluation code that checks the value and type of the variable.
+
+Template Code(Click to Expand)
+empty_list = ... 
+empty_set = ... # be carefull here you might end up creating something called as an empty dict 
+empty_tuple = ... 
+
+singleton_list = ... # list: A list with only one element
+singleton_set = ... # set: A set with only one element
+singleton_tuple = ... # tuple: A tuple with only one element
+
+a_falsy_list = ... # list: a list but when passed to bool function should return False.
+a_falsy_set = ... # set: a list but when passed to bool function should return False.
+a_truthy_tuple = ... # tuple: a tuple but when passed to bool function should return True
+
+int_iterable_min = ... # int: find the minimum of int_iterable. Hint: use min function
+int_iterable_max = ... # int: find the maximum of int_iterable. Hint: use max function
+int_iterable_sum = ... # int: you know what to do
+int_iterable_len = ... # int: really... you need hint?
+int_iterable_sorted = ... # list: the int_iterable sorted in ascending order
+int_iterable_sorted_desc = ... # list: the int_iterable sorted in desc order
+
+if ... : # some iterables are not reversible why?
+    int_iterable_reversed = ... # list: the int_iterable reversed use the reversed function
+else: # in that case sort it in ascending order and reverse it
+    int_iterable_reversed = ... #list
+
+if ...: # some collections are not indexable why?
+    third_last_element = ... # the third last element of `some_collection`
+else: # in that case set third_last_element to None
+    third_last_element = ... 
+
+if ...: # some collections are not slicable
+    odd_index_elements = ... # type(some_collection): the elements at odd indices of `some_collection` 
+else: # in that case set odd_index_elements to None
+    odd_index_elements = ... 
+
+is_some_value_in_some_collection = ... # bool: True if `some_value` is present in `some_collection`
+
+if ...: # some collections are not ordered
+    is_some_value_in_even_indices = ... # bool: True if `some_value` is present in even indices of `some_collection`
+else: # in that case set is_some_value_in_even_indices to None
+    is_some_value_in_even_indices = ...
+
+all_iterables = ... # list: concatenate `some_iterable`, `another_iterable` and `yet_another_iterable` into a list.
+
+if ... : # some iterables are not ordered
+    all_concat = ... # str: concatenate all the strings in string_iterable with '-' in between
+else: # in that case sort them and concatenate
+    all_concat = ...
+
+GrPA 2 - Operations on list and set 
+List mutating operations - This will help you learn the list methods and operations that will modify the list inplace. Note that you should not be creating a new list anywhere in this function.
+Create new lists - This will help you learn how to create new lists that resembles the result of above operations but does not affecting the original list.
+Set operations - This will help you learn things that you can do with sets.    
+
+GrPA 3 - List and set application 
+Implement the following functions:
+
+find_min: Find the minimum value in a list of integers.
+Input: A list of integers.
+Output: An integer, the minimum value in the list.
+odd_increment_even_decrement_no_modify: Increment all the odd numbers in a list by 1 and decrement all the even numbers by 1, without modifying the original list.
+Input: A list of integers.
+Output: A new list of integers with the modified values.
+odd_square_even_double_modify: Square all the odd numbers and double all the even numbers in a list, modifying the list in place.
+Input: A list of integers.
+Output: None (the input list is modified in place).
+more_than_two_unique_vowels: Given a string of comma-separated words, return a set containing words that have more than two unique vowels.
+Input: A string of comma-separated words.
+Output: A set of words with more than two unique vowels.
+sum_of_list_of_lists: Given a list of lists of integers, find the sum of all the integers in all the lists.
+Input: A list of lists of integers.
+Output: An integer, the sum of all the integers in the nested lists.
+flatten: Flatten a list of lists into a single list.
+Input: A list of lists.
+Output: A single flattened list.
+all_common: Find the common characters that are present in all strings in a list of strings and return them as a string in ascending order.
+Input: A list of strings.
+Output: A string containing common characters in ascending order.
+vocabulary: Given a list of sentences (with only alphabets and spaces), find the vocabulary (list of unique words) and return it as a set. Convert all words to lowercase before adding to the vocabulary.
+Input: A list of sentences.
+Output: A set of unique words in lowercase.
+
+GrPA 4 - Function Basics 
+You are required to complete the following functions to perform various operations on tuples and lists.
+
+swap_halves: Swap the first and second halves of a tuple with an even length.
+Input: A tuple of even length.
+Output: A new tuple where the first and second halves are swapped.
+swap_at_index: Break a tuple at a given index ( k ) (the element at the ( k )-th index is included in the first half before swapping) and swap the parts.
+Input: A tuple and an integer ( k ).
+Output: A new tuple where the parts before and after the ( k )-th index are swapped.
+rotate_k: Create a new list with elements of the given list moved ( k ) positions towards the right. The elements at the end should come back to the beginning in a circular order.
+Input: A list and an integer ( k ) (default value ( k = 1 )).
+Output: A new list with the elements rotated ( k ) positions to the right.
+first_and_last_index: Get the indices of the first and last occurrence of a given item in a list. Assume the item is present in the list at least once.
+Input: A list and an item.
+Output: A tuple with the first and last indices of the given item in the list.
+reverse_first_and_last_halves: Reverse the first and last halves of a list with even length in place.
+Input: A list with an even length.
+Output: None (the list should be modified in place).
+
+GrPA 5 - Comprehensions 
+This will help you build up the basics of list comprehensions.
+
+sum_of_squares - find the sum of squares of numbers in a list - (mapping and aggregation)
+total_cost - given quantitiy and price of each item as a list of tuples find the total cost using list comprehensions
+abbreviation - given a string with multiple words seperated by space, form an abbrevation out of it by taking the first letter in caps. (mapping and aggregation)
+palindromes - given a list of strings, create a new list with only palindromes filtering
+all_chars_from_big_words - find the all unique characters (case insensitive, make all lowercase) from all words with size greater than 5 in a given sentence with words seperated by spaces. (filtering)
+flatten - flatten a nested list using comprehension
+unflatten - given a flat list and number of rows, create a matrix (2d list) with that number of rows. (nested-aggregation)
+make_identity_matrix - make an identity (with ones on the main diagonal and zeros elsewhere) given the size.
+make_lower_triangular_matrix - given number of rows m, create a lower triangular matrix like the pattern below. for m = 5
+[
+  [1,0,0,0,0],
+  [1,2,0,0,0],
+  [1,2,3,0,0],
+  [1,2,3,4,0],
+  [1,2,3,4,5]
+]
+Note: you cannot use if statements or loops withing the functions.
+
+# Week - 5 :
