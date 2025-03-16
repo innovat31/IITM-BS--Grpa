@@ -460,3 +460,314 @@ make_lower_triangular_matrix - given number of rows m, create a lower triangular
 Note: you cannot use if statements or loops withing the functions.
 
 # Week - 5 :
+
+GrPA 1 - Dictionary Basics - GRADED
+You are tasked with implementing a series of functions that perform various operations on dictionaries in Python. These functions will manipulate dictionaries that represent fruit prices and perform different operations as specified.
+
+dictionary_operations(fruit_prices: dict, fruits: list)
+
+Perform a series of operations on the given fruit_prices dictionary based on the fruits list:
+
+Add fruits[0] with a cost of 3.
+Modify the cost of fruits[1] to 2.
+Increase the cost of fruits[2] by 2.
+Delete fruits[3] from fruit_prices.
+Print the price of fruits[4].
+Print the names of fruits in fruit_prices as a sorted list.
+Print the prices of fruits in fruit_prices as a sorted list.
+increase_prices(fruit_prices: dict) -> None
+
+Increase the prices of every fruit by 20% and round to two decimal places. Modify the dictionary in place.
+
+dict_from_string(string: str, key_type, value_type)
+
+Convert a string with comma-separated key-value pairs into a dictionary, converting the keys and values to the specified types.
+
+dict_to_string(D: dict) -> str
+
+Convert a dictionary back into a string with each key-value pair on a new line, using comprehensions.
+
+GrPA 2 - Dictionary Applications - GRADED
+Implement the below functions as per the docstrings.
+
+def total_price(fruit_prices: dict, purchases) -> float:
+    '''
+    Compute the fruit prices give the quantity of each fruit. Do not use the sum function.
+
+    Arguments:
+    fruit_prices: dict - fruit name as key and price as value
+    purchases: list[tuple] - as list of tuples of (fruit, quantity)
+
+    Return:
+    total_price: float
+    '''
+    ...
+
+def total_price_no_loops(fruit_prices: dict, purchases) -> float:
+    '''
+    Compute the total price without loops.
+    '''
+    ...
+
+def find_cheapest_fruit(fruit_prices:dict) -> str:
+    '''
+    Find the cheapest fruit from the fruit_prices dict, do not use min function
+
+    Arguments:
+    fruit_prices: dict - fruit name as key and price as value
+
+    Return:
+    cheapest_fruit: str - the fruit with the lowest price
+    '''
+    ...
+
+def find_cheapest_fruit_no_loops(fruit_prices:dict) -> str:
+    '''
+    Find the cheapest fruit using min function. Do not use loops
+    '''
+    ...
+
+# grouping
+def group_fruits(fruits:list):
+    '''
+    Group the fruits based on the first letter of the names. Assume first letters will be upper case.
+
+    Arguments:
+    fruits - list: list of fruit names
+
+    Return:
+    dict: dict with the first letters as keys and list of fruits sorted in ascending order as values.
+    '''
+    ...
+
+# binning
+def bin_fruits(fruit_prices):
+    '''
+    Classify the fruits as cheap, affordable and costly based on the fruit prices. Create a dictionary with the classification as keys and a set of fruits in that category.
+
+    cheap - less than 3 (not inclusive)
+    affordable - between 3 and 6 (both inclusive)
+    costly - greater than 6 (not inclusive)
+
+    Arguments:
+    fruit_prices: dict - dictionary with fruits as keys and prices as values
+
+    Return:
+    binned_fruits: dict - dictionary with category as key and a set of fruits in that category as values.
+    '''
+    ...
+
+    GrPA 3 - Composing functions - GRADED
+Implement all the given functions that are used to solve the below problems.
+
+Follow the path
+
+You are given a matrix of size m x n consisting of ones (1) and zeros (0). There is a single continuous path formed with ones that starts from the rightmost cell in the last row (m-th row) with one and ends at leftmost cell in the first row with one in it. The path does not branch, and there is only one such path. Your task is to traverse along the path and print the coordinates of the path from start to end as tuples over multiple lines. The path can move vertically and horizontally.
+
+Input
+
+matrix = [
+    [0, 0, 1, 1],
+    [0, 0, 0, 1],
+    [1, 1, 1, 1],
+    [1, 0, 0, 0],
+    [1, 1, 0, 0]
+]
+Output
+
+(4,1)
+(4,0)
+(3,0)
+(2,0)
+(2,1)
+(2,2)
+(2,3)
+(1,3)
+(0,3)
+(0,2)
+Alternate the path Same setup, but while going in that path, flip every ones in the even position in the path to 2. Modify the matrix inplace.
+
+Output
+
+[
+    [0, 0, 2, 1],
+    [0, 0, 0, 2],
+    [2, 1, 2, 1],
+    [1, 0, 0, 0],
+    [2, 1, 0, 0]
+]
+Count the path Same setup, but instead of flipping put the count of the step in the path. Modify the matrix inplace.
+
+Output
+
+[
+    [0, 0, 10, 9],
+    [0, 0, 0, 8],
+    [4, 5, 6, 7],
+    [3, 0, 0, 0],
+    [2, 1, 0, 0]
+]
+Mirror the path horizontally Same setup, but also add a path that is the horizontal mirror of the original path in the same matrix.
+
+Input
+
+[
+  [0,1,0,0,0],
+  [0,1,1,1,0],
+  [0,0,0,1,0],
+  [0,0,0,1,1]
+]
+Output
+
+[
+  [0,1,0,1,0],
+  [0,1,1,1,0],
+  [0,1,0,1,0],
+  [1,1,0,1,1]
+]
+Mirror the path vertically Same setup, but also add a path that is the vertical mirror of the original path in the same matrix.
+
+Input
+
+[
+  [0,1,0,0,0],
+  [0,1,1,1,0],
+  [0,0,0,1,0],
+  [0,0,0,1,1]
+]
+Output
+
+[
+  [0,1,0,1,1],
+  [0,1,1,1,0],
+  [0,1,1,1,0],
+  [0,1,0,1,1]
+]
+
+GrPA 4 - lambda, zip, enumerate, map, filter - GRADED
+Implement the given functions according to the docstrings.
+
+# mapping
+def is_greater_than_5(numbers:list) -> list:
+    '''Given a list of numbers, return a list of bools corresponding to whether the number is greater than 5'''
+    ...
+
+# filtering
+def filter_less_than_5(numbers:list)->list:
+    '''Given an list of numbers, return a list of numbers that are less than 5'''
+    ...
+
+# aggregation with filtering
+def sum_of_two_digit_numbers(numbers:list):
+    '''Given a list of numbers find the sum of all two_digit_numbers.
+    '''
+    ...
+
+# aggregation with mapping
+def is_all_has_a(words:list)->bool:
+    '''Given a list of words check if all words has the letter a(case insensitive) in it.
+    '''
+    ...
+
+# enumerate
+def print_with_numbering(items): 
+    '''
+    Print a list in multiple lines with numbering.
+    Eg. ["apple","orange","banana"]
+    1. apple
+    2. orange
+    3. banana
+    '''
+    ...
+
+# zip
+def parallel_print(countries, capitals):
+    '''
+    Print the countries and capitals in multiple line seperated by a hyphen with space around it.
+    '''
+    ...
+
+# key value list to dict
+def make_dict(keys, values):
+    '''Create a dict with keys and values'''
+    ...
+
+# enumerate with filtering and map
+def indices_of_big_words(words) -> list:
+    '''Given a list of words, find the indices of the big words(length greater than 5).
+    '''
+    ...
+
+# zip with mapping and aggregation
+def decode_rle(chars:str, repeats:list)->str:
+    '''
+    Create a string with i-th char from chars repeated i-th value of repeats number of times. 
+
+    Note rle refers to Run-length encoding
+    '''
+    ...
+
+    GrPA 5 - min, max, sorted, groupby - GRADED
+Implement all the given functions below according to the docstring.
+
+def groupby(data:list, key:callable):
+    '''
+    Given a list of items, and a key, create a dictionary with the key as key function called 
+    on item and the list of items with the same key as the corresponding value. 
+    The order of items in the group should be the same order in the original list
+    '''
+    ...
+
+def apply_to_groups(groups:dict, func:callable):
+    '''
+    Apply a function to the list of items for each group.
+    '''
+    ...
+
+def min_course_marks(student_data, course):
+    '''Return the min marks on a given course'''
+    ...
+
+def max_course_marks(student_data, course):
+    '''Return the max marks on a given course'''
+    ...
+
+def rollno_of_max_marks(student_data, course):
+    '''Return the rollno of student with max marks in a course'''
+    ...
+
+def sort_rollno_by_marks(student_data, course1, course2, course3):
+    '''
+    Return a sorted list of rollno sorted based on their marks on the three course marks. 
+    course1 is compared first, then course2, then course3 to break ties.
+    Hint: use tuples comparision
+    '''
+    ...
+
+def count_students_by_cities(student_data):
+    '''
+    Create a dictionary with city as key and number of students from each city as value.
+    '''
+    ...
+
+def city_with_max_no_of_students(student_data):
+    '''
+    Find the city with the maximum number of students.
+    '''
+    ...
+
+def group_rollnos_by_cities(student_data):
+    '''
+    Create a dictionary with city as key and 
+    a sorted list of rollno of students that belong to 
+    that city as the value.
+    '''
+    ...
+
+def city_with_max_avg_course_mark(student_data, course):
+    '''
+    Find the city with the maximum avg course marks.
+    '''
+    ...
+
+ # Week-6 :
