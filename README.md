@@ -2,6 +2,8 @@
 This repository is for the weekly Graded Programming Assignments of IITM BS Degree.
 This is specifically for python Term-2 Jan 2025- April 2025(Term-1 according to the year 2025).
 
+* In some cases, multiple solutions are uploaded, all of which are correct.
+
 # Week-1 :
 
 GrPA 1 - Numbers (Arithemetic) - GRADED
