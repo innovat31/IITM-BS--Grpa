@@ -958,3 +958,26 @@ def is_palindrome(n: int) -> bool:
     ...
 
 Collections-1 :
+Rotate a list K times
+Given a list of items and an integer k, rotate the list to the right by k steps.
+
+Consider that the list contains at least one item.
+
+Example
+
+>>> rotate_list([1, 2, 3, 4, 5], 2)
+[4, 5, 1, 2, 3]
+
+Collections-2 :
+Swap Alternate Elements in a Tuple
+Write a function to swap every alternate of adjacent elements in the tuple.
+
+Assume the length of the tuple is even.
+
+Examples
+
+>>> swap_alternate_elements((1, 2, 3, 4, 5, 6))
+(2, 1, 4, 3, 6, 5)
+>>> swap_alternate_elements(('a', 'b', 'c', 'd'))
+('b', 'a', 'd', 'c')
+
