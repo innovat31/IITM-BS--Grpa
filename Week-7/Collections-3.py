@@ -1,3 +1,10 @@
+# Actual Solution :
+
+
+
+
+# My Solution :
+
 def number_of_unique_common_digits(n1: int, n2: int) -> int:
     '''
     Given two integers, return the number of unique digits that are common in both numbers.
