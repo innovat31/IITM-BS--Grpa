@@ -1,3 +1,5 @@
+# This is the same file from the other week-1 repo.
+
 # Sample inputs (# note: The values given in the prefix code(grey) will be changed by the autograder according to the testcase while running them.
 a = 2
 b = -5
